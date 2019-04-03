@@ -107,6 +107,25 @@ git reflog -->历史版本操作记录
     ```
     以上操作成功后，在用户主目录里面找到`.ssh`目录，里面有`id_rsa`和`id_rsa.pub`两个文件，这两个就是SSH Key的秘钥对，`id_rsa`是私钥，不能泄露出去，`id_rsa.pub`是公钥，可以放心地告诉任何人
     2. 登录[github](https://github.com/)，打开“Account settings”，“SSH Keys”页面；点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容；然后点击“Add Key”，完成！
+
 2. 添加
 
-      
+    1. 创建新git库
+
+       登录github，Create a new repository
+
+    2. 复制git库SSH地址 `git@github.com:kyle-yangkai/gitlearnning.git `（也可以使用https地址）然后输入命令
+
+       ```
+       $ git remote add origin git@github.com:kyle-yangkai/gitlearnning.git
+       ```
+
+    3. 将本地库所有内容推送到远程库中
+
+       ```
+       $ git push -u origin master
+       ```
+
+       
+
+    ​    
